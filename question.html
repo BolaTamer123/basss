@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/fontawesome-free-6.6.0-web/fontawesome-free-6.6.0-web/css/all.css">
+    <link rel="stylesheet" href="css/style-l.css">
+    <title>Top Laptop</title>
+
+</head>
+<body>
+
+<header class="header">
+    <nav class="navbar">
+        <div class="logo">
+          <a href="index.html"><img src="imges/Logo.png" alt="Logo"></a> 
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="Login.html">Login</a></li>
+            <li><a href="question.html">Your Laptop</a></li>
+        </ul>
+        <div class="icons">
+        <a href="#" class="lit">  <i class="fa-solid fa-cart-shopping lit"></i> </a>
+      <a href="sigin in.html" class="icon">
+             <i class="fa-solid fa-user icon"></i> </a> 
+            
+            
+        </div>
+    </nav>
+
+    <div class="cart-menu" id="cartMenu">
+        <h3>Products in Cart</h3>
+        <div class="cart-item">Product 1 - $10</div>
+        <div class="cart-item">Product 2 - $15</div>
+        <div class="cart-item">Product 3 - $20</div>
+    </div>
+</header>
+<div class="div-intro">
+<img src="imges/LAPTOP INTRO.png">
+</div>
+
+
+
+
+
+<script>
+    const cartIcon = document.querySelector('.lit');
+    const cartMenu = document.getElementById('cartMenu');
+
+    cartIcon.addEventListener('click', () => {
+        cartMenu.style.display = cartMenu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!cartIcon.contains(event.target) && !cartMenu.contains(event.target)) {
+            cartMenu.style.display = 'none';
+        }
+    });
+</script>
+
+</body>
+</html>
